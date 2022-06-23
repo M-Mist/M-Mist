@@ -50,6 +50,11 @@
     .next {
       right: 0;
       border-radius: 3px 0 0 3px;
+      background-color: black;
+    }
+    .prev {
+      border-radius: 3px 0 0 3px;
+      background-color: black;
     }
     
     /* On hover, add a black background color with a little bit see-through */
@@ -66,15 +71,17 @@
       bottom: 8px;
       width: 100%;
       text-align: center; */
-      max-width: 50%;
+      max-width: 32%;
   position: absolute;
-  top: 50%;
-  /* left: 300px;
-  transform: translate(-50%); */
-  background-color:rgba(0, 0, 0, .8);
+  top: 40%;
+  left:22%;
+  transform: translate(-50%); 
+  background-color:rgba(0, 0, 0, .3);
   color: white;
   font-size: 25px;
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
+  font-weight: bold;
+  text-align: left; 
     }
     
     /* Number text (1/3 etc) */
@@ -199,6 +206,22 @@
   color: white;
   padding: 10rem 20rem;
 }
+.smallbox{
+      cursor: pointer;
+        max-width: 50%;
+  position: absolute;
+  top: 6%;
+  left: 4%;
+  padding: 1rem 3rem;
+    }
+    .Ssmallbox {
+      font-size: 70px;;
+      color:rgb(0, 0, 0);
+      box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  margin-bottom: 20px;
+    }
+
 @media (max-width:768px){
   .contain .popup-image img{
     width: 95%;
@@ -209,29 +232,34 @@
       from {opacity: .4} 
       to {opacity: 1}
     }
-    
-    /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 300px) {
-      .prev, .next,.text {font-size: 11px}
-    }
-    .smallbox{
-      cursor: pointer;
-        max-width: 50%;
+    @media (max-width: 600px) {
+      .text{
+        font-weight: bold;
+        text-align: left; 
+      max-width: 70%;
   position: absolute;
-  top: 6%;
-  left: 4%;
-  padding: 1rem 3rem;
+  top: 56%;
+  left: 33%;
+  background-color:rgba(0, 0, 0, .3);
+  color: white;
+  font-size: 14px;
+  padding: 1rem 1rem;
+    
+      }
+      .Ssmallbox {
+        font-size: 15px;
+        color:#39393a;
+        font-family: "Arial";
+        text-transform: uppercase;
+        left: -5%;
+      }
+      
+      
+
     }
-    .Ssmallbox {
-      font-size: 80px;
-      color:rgb(0, 0, 0);
-      box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-        /* background-color:rgb(0, 0, 0); */
-  margin-bottom: 10px;
-  /* border: 1px solid white; */
-}
-  
+    /* On smaller screens, decrease text size */
+
+    
     </style>
     </head>
     <body>
@@ -241,8 +269,7 @@
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
       <img src="Main/Img/1.png" style="width:100%">
-      <div class="text">Офісний центр знаходиться за адресою: 
-        м. Київ, Оболонський район, проспект Степана Бандери (Московський), будинок    20-Б (літера Б).
+      <div class="text">Офісний центр знаходиться за адресою: м. Київ, Оболонський район, проспект Степана Бандери (Московський), будинок 20-Б (літера Б).
         </div>
     </div>
     
@@ -268,14 +295,14 @@
     </div>
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
-      <img src="Main/Img/4.jpg" style="width:100%">
+      <img src="Img/4.jpg" style="width:100%">
       <div class="text">На першому поверсі розміщена рецепція цілодобової служби охорони. У будівлі діє карткова пропускна система входу / виходу. Офісний центр оснащений двома ліфтами пасажирським і вантажно-пасажирським
         Для зручності наших партнерів Офісний центр має власний професійний відділ клінінгу, укомплектований необхідним обладнанням.
       </div>
       <div class="smallbox">
-        <div class="Ssmallbox"onclick="location.href='4/index.html';"><strong>4 Поверх</strong></div>
-        <div onclick="location.href='7/index.html';" class="Ssmallbox"><strong>7 Поверх</strong></div>
-        <div onclick="location.href='7 copy/index.html';" class="Ssmallbox"><strong>8 Поверх</strong></div>
+        <div class="Ssmallbox"onclick="location.href='4/index.html';"><strong>4 поверх</strong></div>
+        <div onclick="location.href='7/index.html';" class="Ssmallbox"><strong>7 поверх</strong></div>
+        <div onclick="location.href='7 copy/index.html';" class="Ssmallbox"><strong>8 поверх</strong></div>
       </div>
     </div>
     <div class="mySlides fade">
@@ -331,4 +358,4 @@
     
     </body>
     </html> 
-  
+   
