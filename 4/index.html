@@ -53,8 +53,14 @@ position: relative;
     
     /* Position the "next button" to the right */
     .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
+      right:0px;
+      border-radius: 10px 0 0 10px;
+      background-color:black;
+    }
+    .prev{
+      left: 0px;
+      border-radius: 10px 0 0 10px;
+      background-color:black;
     }
     
     /* On hover, add a black background color with a little bit see-through */
@@ -73,13 +79,14 @@ position: relative;
       text-align: center; */
       max-width: 50%;
   position: absolute;
-  top: 50%;
+  top: 67%;
   /* left: 300px;
   transform: translate(-50%); */
-  background-color:rgba(0, 0, 0, .8);
+  background-color:rgba(0, 0, 0, .3);
   color: white;
-  font-size: 25px;
-  padding: 1rem 3rem;
+  font-size: 20px;
+  padding: 1rem 1rem;
+  font-weight: bold;
     }
     
     /* Number text (1/3 etc) */
@@ -98,7 +105,9 @@ position: relative;
     }
 
 
-
+body{
+  background-color:rgba(0, 0, 0, 0.253);
+}
 
 
 .contain {
@@ -161,12 +170,20 @@ position: relative;
 #Panoram{
   max-width: 50%;
   position: absolute;
-  top: 0%;
+  top: 91%;
+  left: 70%;
   /* left: 300px;
   transform: translate(-50%); */
-  background-color:rgba(0, 0, 0, .8);
+  background-color:rgba(0, 0, 0, .3);
   color: white;
-  padding: -17rem 20rem;
+  padding: -4rem 1rem;
+}
+.desOffice{
+margin-left: 5%;
+width: 90%;
+height: 100%;
+object-fit: convex;
+
 }
 @media (max-width:768px){
   .contain .popup-image img{
@@ -180,8 +197,40 @@ position: relative;
     }
     
     /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 300px) {
+    @media only screen and (max-width: 700px) {
       .prev, .next,.text {font-size: 11px}
+    }
+    @media (max-width: 700px) {
+      .text{
+        font-weight: bold;
+        text-align: left; 
+      max-width: 80%;
+  position: absolute;
+  top: 53%;
+  /* left: 300px;
+  transform: translate(-50%); */
+  background-color:rgba(0, 0, 0, .3);
+  color: white;
+  font-size: 11px;
+  padding: 1rem 1rem;
+    
+      }
+      .Ssmallbox {
+        font-size: 20px;
+      }
+      .desOffice {
+        width: 75%;
+        height: 270px;
+        margin-left: 13%;
+        margin-top: 3%;
+      }
+      #Panoram{
+        top: 90%;
+      left: 54%;
+      padding: -4rem 1rem;
+      }
+      
+
     }
   
     </style>
@@ -193,7 +242,7 @@ position: relative;
     
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
-      <img class = "desOffice"src="Img/5.jpg" style="margin-left: 16%;">
+      <img class = "desOffice"src="Img/5.jpg">
     </div>
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
@@ -216,11 +265,18 @@ position: relative;
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
       <img class ="imgs"src="Img/18.jpg" style="width:100%">
-      <div class="text">Caption Three</div>
+      <div class="text">Торговельно – розважальний комплекс для активного життя
+        На території першого та другого поверхів комплексу розміщені магазини провідних спортивних брендів.
+        Розваги гарантує найбільший в Україні боулінг клуб та караоке бар.
+        Спортивний стан забезпечить фітнес клуб Sport Life, а також два басейни на території третього поверху.
+        Заклади харчування: Ресторан боулінг клубу (бізнес ланч), Суши-бар Евразия, Кофейні.
+        Сервісні партнери: Турагенції, оптика, обмін валют, преса.
+        <br>
+        Торгово – офісний центр має містку паркувальну територію та необмежену пропозицію паркомісць</div>
     </div>
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
-      <img src="Img/19.jpg" style="width:100%">
+      <img class = "imgs"src="Img/19.jpg" style="width:100%">
       <div id = "Panoram"class="text">Ваша майбутня оглядова панорама,<br> насолоджуйтеся!</div>
     </div>
     <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -269,166 +325,3 @@ position: relative;
     </body>
     </html> 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- <style>
-       *{
-  /* margin: 0;
-  padding: 0; */
-  box-sizing: border-box;
-}
-/* html{
-  font-size: 10px;
-} */
-/* body{
-  background-color: #000;
-} */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: 1} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-.Slideshow{
-  width: 100%;
-  height: 100%;
-  position: 100%;
-  
-}
-.slideshow-item{
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  display: none;
-}
-
-.slideshow-item img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.slideshow-item-text{
-  max-width: 50%;
-  position: absolute;
-  top: 50%;
-  /* left: 300px;
-  transform: translate(-50%); */
-  background-color:rgba(0, 0, 0, .8);
-  color: white;
-  padding: 10rem 5rem;
-}
-.slideshow-item-text h5{
-  font-size:  5rem;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 2.5rem;
-}
-.slideshow-item-text p{
-  font-size: 1.6rem;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 1px;
-  font-weight: 300;
-}
-
-   </style>
-        </head>
-        <body>
-       <div class="Slideshow">
-           <div class="slideshow-item">
-               <img src="Img/2.jpg" alt="">
-               <div class="slideshow-item-text">
-                   <h5>Name NNSFASFAF  ASDJOAJDO JOAJSD OASD</h5>
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores magni eos animi ab, dignissimos voluptate, labore aliquid natus et velit voluptates vitae id ipsum quas voluptatum adipisci eligendi unde. Tenetur!</p>
-               </div>
-           </div>
-           <div class="slideshow-item">
-            <img src="Img/2.jpg" alt="">
-            <div class="slideshow-item-text">
-                <h5>Name NNSFASFAF  ASDJOAJDO JOAJSD OASD </h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores magni eos animi ab, dignissimos voluptate, labore aliquid natus et velit voluptates vitae id ipsum quas voluptatum adipisci eligendi unde. Tenetur!</p>
-            </div>
-        </div>
-        <div class="slideshow-item">
-            <img src="Img/3.jpg" alt="">
-            <div class="slideshow-item-text">
-                <h5>Name</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores magni eos animi ab, dignissimos voluptate, labore aliquid natus et velit voluptates vitae id ipsum quas voluptatum adipisci eligendi unde. Tenetur!</p>
-            </div>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-       </div>
-
-
-
-
-       <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("Slideshow");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slides[slideIndex-1].style.display = "block";  
-        }
-        </script>
