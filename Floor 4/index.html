@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> -->
+ <title>M-Mist</title>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0;width:100%}
+    .mySlides {display: none;
+        width: 100%;
+  height: 100%;}
+  /* .desOffice img{
+height: 60%;
+width: 90%;
+position: relative;
+} */
+    /* Slideshow container *gotohellfuckkrema15/
+    
+    .slideshow-container {
+        width: 100%;
+        height: 100%;
+      position: absolute;
+      margin: auto;
+    }
+    .imgs{
+        width: 100%;
+  height: 100%;
+  object-fit: cover;
+    }
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: fixed;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right:0px;
+      top: 50%;
+      border-radius: 10px 0 0 10px;
+      background-color:black;
+     
+    }
+    .prev{
+      left: 0px;
+      top: 50%;
+      border-radius: 10px 0 0 10px;
+      background-color:black;
+  
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      /* color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center; */
+      max-width: 50%;
+  position: absolute;
+  top: 67%;
+  /* left: 300px;
+  transform: translate(-50%); */
+  background-color:rgba(0, 0, 0, .3);
+  color: white;
+  font-size: 20px;
+  padding: 1rem 1rem;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+
+body{
+  background-color:rgba(0, 0, 0, 0.253);
+}
+
+
+.contain {
+  position: relative;
+  min-height: 100vh;
+}
+.contain .image-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+.contain .image-container .flexim{
+  height: 311px;
+  width: 583px;
+  border: 10px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+}
+.contain .image-container .flexim img{
+  object-fit: cover;
+  transition: .2s linear;
+
+}
+.contain .image-container .flexim:hover{
+  transform: scale(1.009);
+}
+.contain .popup-image{
+  position: fixed;
+  top: 0; left: 0;
+  background:rgba(0, 0, 0, .9);
+  height: 100%;
+  width:100%;
+  z-index: 100;
+  display: none;
+}
+.contain .popup-image span{
+  position: absolute;
+  top: 0; right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color:white;
+  cursor: pointer;
+  z-index: 100;
+}
+.contain .popup-image img{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  border: 5px solid white;
+  border-radius:5px;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+#Panoram{
+  max-width: 50%;
+  position: absolute;
+  bottom: 0%;
+  left: 70%;
+  /* left: 300px;
+  transform: translate(-50%); */
+  background-color:rgba(0, 0, 0, .3);
+  color: white;
+  padding: -4rem 1rem;
+}
+#Infract{
+  max-width: 50%;
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  /* left: 300px;
+  transform: translate(-50%); */
+  background-color:rgba(0, 0, 0, .3);
+  color: white;
+  padding: 0rem 0rem;
+}
+.desOffice{
+margin-left: 5%;
+width: 90%;
+height: 100%;
+object-fit: convex;
+
+}
+        .back{
+      position: relative;
+      top: -90%;
+      left: -94%;
+    }
+@media (max-width:768px){
+  .contain .popup-image img{
+    width: 95%;
+  }
+}
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 900px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    /* @media (max-width: 900px) {
+      .text{
+        text-align: left; 
+      max-width: 80%;
+  position: absolute;
+  top: 53%;
+  background-color:rgba(0, 0, 0, .3);
+  color: white;
+  font-size: 11px;
+  padding: 1rem 1rem;
+    
+      }
+      .Ssmallbox {
+        font-size: 20px;
+      }
+      .desOffice {
+        width: 78%;
+        height: 373px;
+        margin-left: 11%;
+        margin-top: 0%;
+      }
+      #Panoram{
+        top: 82%;
+      left: 54%;
+      padding: -4rem 1rem;
+      }
+      #Infract{
+        top: 4%;
+      left: 5%;
+      padding: 0rem 0rem;
+      }
+        .back{
+        height:3rem;
+font-size: 3.75em;
+        top: -324px;
+      left: -88%;
+      }
+      
+
+    }
+    @media (orientation: portrait) {
+.back{
+  top: -370px;
+      left: 0%;
+}
+      
+
+    } */
+    @media (max-width: 900px) {
+      .text{
+        text-align: left; 
+      max-width: 80%;
+  position: absolute;
+  top: 53%;
+  background-color:rgba(0, 0, 0, .3);
+  color: white;
+  font-size: 11px;
+  padding: 1rem 0rem;
+    
+      }
+      .Ssmallbox {
+        font-size: 20px;
+      }
+      .desOffice {
+        width: 90%;
+        height: 90%;
+        margin-left: 5%;
+        margin-top: 2%;
+      }
+      #Panoram{
+        top: 82%;
+      left: 54%;
+      padding: -4rem 1rem;
+      }
+      #Infract{
+        top: 4%;
+      left: 5%;
+      padding: 0rem 0rem;
+      }
+      
+
+    }
+    @media (max-width:600px) {
+      .text{
+        text-align: left; 
+      max-width: 80%;
+  position: absolute;
+  top: 53%;
+  background-color:rgba(0, 0, 0, .3);
+  color: white;
+  font-size: 11px;
+  padding: 1rem 0rem;
+    
+      }
+      .Ssmallbox {
+        font-size: 20px;
+      }
+      .desOffice {
+        width: 100%;
+        height: 37%;
+        margin-left: 0%;
+        margin-top: 0%;
+        
+        
+      }
+      #Panoram{
+        top: 88%;
+      left: 54%;
+      padding: -4rem 1rem;
+      }
+      #Infract{
+        top: 4%;
+      left: 5%;
+      padding: 0rem 0rem;
+      }
+      
+
+    }
+  
+    </style>
+    </head>
+    <body>
+    
+    <div class="slideshow-container">
+    
+    
+    <div class="mySlides fade">
+      <img class = "desOffice"src="Img/5.jpg">
+
+    </div>
+    <div class="mySlides fade">
+
+      <div class = "contain">
+        <div class="image-container">
+          <img class ="flexim"src="Img/7.JPG">
+          <img class ="flexim"src="Img/8.JPG" >
+          <img class ="flexim"src="Img/9.JPG">
+          <!-- <img class ="flexim"src="Img/10.jpg"> -->
+          <img class ="flexim"src="Img/11.JPG">
+          <img class ="flexim"src="Img/12.JPG">
+          <img class ="flexim"src="Img/13.JPG">
+        </div>
+        <div class="popup-image">
+          <span>&times;</span>
+          <img src="Img/9.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="mySlides fade">
+
+      <img class ="imgs"src="Img/18.jpg" style="width:100%">
+      <div id = "Infract"class="text">Инфраструктура</div>
+      <div class="text">Торговельно – розважальний комплекс для активного життя
+        На території першого та другого поверхів комплексу розміщені магазини провідних спортивних брендів.
+        Розваги гарантує найбільший в Україні боулінг клуб та караоке бар.
+        Спортивний стан забезпечить фітнес клуб Sport Life, а також два басейни на території третього поверху.
+        Заклади харчування: Ресторан боулінг клубу (бізнес ланч), Суши-бар Евразия, Кофейні.
+        Сервісні партнери: Турагенції, оптика, обмін валют, преса.
+        <br>
+        Торгово – офісний центр має містку паркувальну територію та необмежену пропозицію паркомісць</div>
+    </div>
+    <div class="mySlides fade">
+
+      <img class = "imgs"src="Img/19.jpg" style="width:100%">
+      <div id = "Panoram"class="text">Ваша майбутня оглядова панорама,<br> насолоджуйтеся!</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+
+    <script>
+      document.querySelectorAll('.image-container img').forEach(image =>{
+        image.onclick= () =>{
+          document.querySelector('.popup-image').style.display = 'block';
+          document.querySelector('.popup-image img').src = image.getAttribute('src')
+        }
+      });
+      document.querySelector('.popup-image span').onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'none';
+      }
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+    }
+    </script>
+    
+    </body>
+    </html> 
